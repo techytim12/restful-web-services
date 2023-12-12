@@ -1,14 +1,16 @@
 package com.techm.rest.webservices.restfulwebservices.filtering;
 
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties("val1")
+//@JsonIgnoreProperties("val1")
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
 
     private String val1;
-    @JsonIgnore
+    //@JsonIgnore
     private String val2;
     private String val3;
 
